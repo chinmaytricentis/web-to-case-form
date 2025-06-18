@@ -26,7 +26,7 @@ form {
   max-width: 500px;
   margin: auto;
   background: rgba(255, 255, 255, 0.08); /* more transparent */
-  backdrop-filter: blur(16px); /* glass effect */
+  backdrop-filter: blur(4px); /* glass effect */
   -webkit-backdrop-filter: blur(16px);
   padding: 30px;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -87,4 +87,46 @@ input[type=submit]:hover {
 
 .error {
   color: #ff6666;
+}
+
+
+/* Banner message styling */
+.banner {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Spinner */
+.spinner {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #6a11cb;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }

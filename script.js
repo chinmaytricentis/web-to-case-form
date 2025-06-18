@@ -1,9 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('webToCaseForm');
   const messageDiv = document.getElementById('message');
+  const loading = document.getElementById('loading');
 
   form.addEventListener('submit', function (e) {
-    e.preventDefault(); // Stop default form submission (no redirect)
+    e.preventDefault();
+    messageDiv.style.display = 'none';
+    loading.style.display = 'block';
 
     const formData = new FormData(form);
 
@@ -13,13 +16,19 @@ document.addEventListener('DOMContentLoaded', function () {
       mode: 'no-cors'
     })
       .then(() => {
-        messageDiv.textContent = 'Your case has been submitted successfully!';
-        messageDiv.className = 'message success';
+        loading.style.display = 'none';
         form.reset();
+        showMessage('Your case has been submitted successfully!', 'success');
       })
       .catch(() => {
-        messageDiv.textContent = 'There was a problem submitting your case. Please try again.';
-        messageDiv.className = 'message error';
+        loading.style.display = 'none';
+        showMessage('There was a problem submitting your case. Please try again.', 'error');
       });
   });
+
+  function showMessage(message, type) {
+    messageDiv.textContent = message;
+    messageDiv.className = 'banner ' + type;
+    messageDiv.style.display = 'block';
+  }
 });
