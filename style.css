@@ -1,23 +1,16 @@
-<style>
-  /* {
-    font-family: Arial;
-    background-color: #f0f8ff;
-    padding: 20px;
-    color: #003366;
-  }
-  */
-  body {
-    font-family: Arial;
-    background-image: url('background.jpg'); /* relative path from root */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    color: #003366;
-  }
+/* Background image and page style */
+body {
+  font-family: Arial;
+  background-image: url('background.jpg'); /* You can change this image URL */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  color: #003366;
+}
 
-  /* Heading */
+/* Heading */
 .main-heading {
   text-align: center;
   font-size: 40px;
@@ -30,11 +23,14 @@
 form {
   max-width: 500px;
   margin: auto;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.1); /* Very transparent white */
+  backdrop-filter: blur(10px); /* Glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
   padding: 30px;
-  border: 2px solid #3399ff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  color: #003366;
 }
 
 input, textarea {
@@ -73,5 +69,3 @@ input[type=submit]:hover {
 .error {
   color: red;
 }
-
-</style>
