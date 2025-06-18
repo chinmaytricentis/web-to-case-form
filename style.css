@@ -1,8 +1,19 @@
 <style>
-  body {
+  /* {
     font-family: Arial;
     background-color: #f0f8ff;
     padding: 20px;
+    color: #003366;
+  }
+  */
+  body {
+    font-family: Arial;
+    background-image: url('background.jpg'); /* relative path from root */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
     color: #003366;
   }
 
