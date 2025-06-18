@@ -81,14 +81,6 @@ input[type=submit]:hover {
   font-size: 18px;
 }
 
-.success {
-  color: #00ffcc;
-}
-
-.error {
-  color: #ff6666;
-}
-
 
 /* Banner message styling */
 .banner {
